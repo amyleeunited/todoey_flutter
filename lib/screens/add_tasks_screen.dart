@@ -8,7 +8,7 @@ class AddTaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     String newTaskTitle;
-    TaskData data = Provider.of<TaskData>(context, listen: false);
+    TaskData data = Provider.of<TaskData>(context);
 
     return Container(
       color: Color(0xff757575),
@@ -46,6 +46,7 @@ class AddTaskScreen extends StatelessWidget {
               ),
               onPressed: (){
                 data.addToList(newTaskTitle);
+//                Provider.of<TaskData>(context).addToList(newTaskTitle);
                 Navigator.pop(context);
               }
             ),
