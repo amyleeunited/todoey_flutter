@@ -47,6 +47,7 @@ class AddTaskScreen extends StatelessWidget {
               onPressed: (){
                 data.addToList(newTaskTitle);
 //                Provider.of<TaskData>(context).addToList(newTaskTitle);
+//                Can't add provider in a onPressed function. Have to create object and then use project to call'
                 Navigator.pop(context);
               }
             ),
